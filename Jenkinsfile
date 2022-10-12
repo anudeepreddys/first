@@ -2,7 +2,9 @@ pipeline {
     options {
         timeout(time: 1, unit: 'HOURS')
     }
-
+    agent {
+        label 'linux'
+    }
     stages {
         stage('build and push') {
             steps{
